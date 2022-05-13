@@ -65,6 +65,7 @@ let verifyGuess = function (guess) {
     if (guess == correctNumber) {
         displayMessage('.message', '🎉 Correct!');
         setBodyBackgroundColor('#60b347')
+        displayMessage('.number', correctNumber);
         recordNewHighScore();
     }
 
@@ -83,7 +84,8 @@ const reset = function () {
     score = maxNumber;
     displayMessage('.message', '🔄 Start guessing...');
     displayMessage('.score', score);
-    displayMessage('.guess', '');
+    document.querySelector('.guess').value = '';
+    displayMessage('.number', '?');
     correctNumber = generateRandomNumber(maxNumber);
     setBodyBackgroundColor('#222')
 }
