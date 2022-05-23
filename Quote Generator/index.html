@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Quote generator</title>
+    <!-- style -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="quote-container" id="quote-container">
+        <div class="quote-text">
+          <i class="fas fa-quote-left"></i>
+          <span id="quote">
+            I have learned over the years that when one's mind is made up, this
+            diminishes fear
+          </span>
+          <i class="fas fa-quote-right"></i>
+        </div>
+
+        <div class="quote-author">
+          <span id="author"> haddad zineddine </span>
+        </div>
+      </div>
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="quote-button">
+        <button class="fill" id="tweet-quote" title="Tweet This !">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="simple" id="new-quote">New quote</button>
+      </div>
+    </div>
+
+    <div class="loader"></div>
+
+    <!-- script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
