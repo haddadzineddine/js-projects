@@ -1,0 +1,211 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300");
+
+:root {
+  --primary-color: #2ca4ab;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  height: 50vh;
+  background-color: var(--primary-color);
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+}
+
+.quran-image {
+  width: 16rem;
+  height: 16rem;
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0.1));
+
+}
+
+.quran {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quran-search {
+  width: 100%;
+  padding: 1rem 6rem;
+  border-radius: 4rem;
+  border: none;
+}
+
+.quran-search:focus {
+  outline: none;
+}
+
+.search {
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4rem;
+  position: relative;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 3rem;
+  font-size: x-large;
+  color: #b3b3b3;
+}
+
+.quran-list {
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  --fill-color: #f8f9fa;
+  --fill-color-text: #333;
+  --fill-color-sub: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 24rem;
+  height: 2.5rem;
+  padding: 1rem 2rem;
+
+  border-radius: 4rem;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 5px 5px 5px var(--fill-color);
+}
+
+.card:hover {
+  --fill-color: #2ca4ab;
+  --fill-color-sub: #2ca4ab;
+  --fill-color-text: #fff;
+  cursor: pointer;
+}
+
+.quran-number {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--fill-color);
+  display: flex;
+  color: var(--fill-color-text);
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bolder;
+  border-radius: 50%;
+}
+
+.surah-name {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  margin-left: 1rem;
+  color: var(--text-color);
+}
+
+.english-name-translation {
+  margin-top: 4px;
+  font-size: small;
+  color: var(--fill-color-sub);
+}
+
+.english-name {
+  font-weight: bold;
+  font-size: medium;
+}
+.arabic-name {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.aya-number {
+  margin-top: 4px;
+  font-size: small;
+  color: var(--fill-color-sub);
+}
+
+.surah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bolder;
+  color: #b3b3b3;
+}
+
+
+
+
+
+
+/* loder */
+
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  color: var(--primary-color);
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em,
+      0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em,
+      0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
