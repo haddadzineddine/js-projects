@@ -22,7 +22,6 @@ body {
   width: 16rem;
   height: 16rem;
   filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, 0.1));
-
 }
 
 .quran {
@@ -150,11 +149,6 @@ body {
   color: #b3b3b3;
 }
 
-
-
-
-
-
 /* loder */
 
 .load {
@@ -208,4 +202,21 @@ body {
     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
       0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .quran-search {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    border: none;
+    font-size: small;
+  }
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    font-size: small;
+    color: #b3b3b3;
+  }
+
 }
